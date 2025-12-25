@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       preview: {
-        allowedHosts: ['*'] // هر هاستی مجاز است، مخصوصاً Render
+        allowedHosts: ['music-finder-o27w.onrender.com'] // هر هاستی مجاز است، مخصوصاً Render
       },
       plugins: [react()],
       define: {
