@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
-const OPENROUTER_API_KEY = "PASTE_YOUR_API_KEY_HERE"; // ← کلیدتو اینجا بذار
+const OPENROUTER_API_KEY = "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"; // ← کلیدتو اینجا بذار
 
 app.post("/api/search-song", async (req, res) => {
   try {

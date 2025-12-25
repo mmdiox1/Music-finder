@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SongLanguage, SearchFormData } from '../types';
 
-const OPENROUTER_API_KEY = "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"; // ← اینجا کلیدتو بذار
+
 
 const SearchForm: React.FC = () => {
   const [formData, setFormData] = useState<SearchFormData>({
@@ -92,4 +92,4 @@ export default SearchForm;
 
 
 
-// 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
+
