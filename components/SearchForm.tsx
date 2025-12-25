@@ -24,34 +24,14 @@ const SearchForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(
-        "https://openrouter.ai/api/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://music-finder-o27w.onrender.com",
-            "X-Title": "Music Finder"
-          },
-          body: JSON.stringify({
-            model: "tngtech/deepseek-r1t2-chimera:free",
-            messages: [
-              {
-                role: "user",
-                content: `
-Find the song name and artist based on these details:
-Lyrics: ${formData.lyrics}
-Artist (if any): ${formData.artist}
-Language: ${formData.language}
+     const response = await fetch("/api/search-song", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    query: `Find a song with lyrics: ${formData.lyrics}, artist: ${formData.artist}, language: ${formData.language}`
+  })
+});
 
-Return a clear answer.
-                `
-              }
-            ]
-          })
-        }
-      );
 
       if (!response.ok) {
         throw new Error("درخواست به API موفقیت‌آمیز نبود");
