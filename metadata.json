@@ -1,0 +1,6 @@
+
+{
+  "name": "آهنگ‌یاب رعنا - Music Finder AI",
+  "description": "An AI-powered music finder that identifies songs by lyrics and provides direct links using the Gemini API and Google Search grounding.",
+  "requestFramePermissions": []
+}
