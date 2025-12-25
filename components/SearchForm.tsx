@@ -25,7 +25,8 @@ const SearchForm: React.FC = () => {
 
     try {
     const response = await fetch(
-    "https://music-finder-server.onrender.com/api/search-song",
+    "https://music-finder-o27w.onrender.com/api/search-song"
+    ,
   {
     method: "POST",
     headers: { "Content-Type": "application/json" },
