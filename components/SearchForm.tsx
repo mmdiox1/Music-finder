@@ -24,13 +24,17 @@ const SearchForm: React.FC = () => {
     setIsLoading(true);
 
     try {
-     const response = await fetch("/api/search-song", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    query: `Find a song with lyrics: ${formData.lyrics}, artist: ${formData.artist}, language: ${formData.language}`
-  })
-});
+    const response = await fetch(
+    "https://music-finder-server.onrender.com/api/search-song",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      query: `Find a song with lyrics: ${formData.lyrics}, artist: ${formData.artist}, language: ${formData.language}`
+    })
+  }
+);
+
 
 
       if (!response.ok) {
